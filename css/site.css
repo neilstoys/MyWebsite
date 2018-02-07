@@ -1,0 +1,316 @@
+body{
+  width: 100%;
+  margin: 0;  /*stop browser wiggle*/
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*main*/
+main{
+  min-height: 600px;
+  width: 100%;
+  background: #aaa;
+}
+  #myHeader{
+    min-height: 500px;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 500px;
+    text-align: center;
+    background: url("../images/EclipseClimber_Struder_Header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+  }
+    #socialLeft{
+      position: fixed;
+      float: left;
+      width: 64px;
+      margin-top: 100px;
+      background: rgba(68, 62, 62, .42);
+      border-radius: 0 12 12 0;
+    }
+    #social-wrapper {
+      position: absolute;
+      z-index: 5000;
+    }
+    .social{
+      display: block;
+    }
+    #headingSpan{
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      font-size: 3em;
+      padding-top: 20px;
+    }
+  /*nav*/
+  nav{
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: 100;
+    text-align: center;
+    z-index: 500;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-right: 3%;
+    width: 100px;
+  }
+  nav ul li a{
+    font-weight: normal;
+    padding: 5px 5px;
+    border-radius: 70%;
+    text-decoration: none;
+    color: #000;
+  /*Sets up the effects when called by nav ul li a:hover or nav ul li a:active*/
+  transition-property: color, width, background, border-radius;   
+  transition-duration: .2s;
+  transition-timing-function:ease-in;
+  transition-delay: .1s;
+  }
+  nav ul li a:hover {
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 5%;
+    font-weight:bold;
+  }
+  nav ul li a:active {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5%;
+  }  
+  /*end nav*/
+    /*Sections*/
+    section{
+      width: 100%;
+      min-height: 400px;
+    }
+      .cube1 {
+        position: relative;
+        width: 33.33%;
+        min-height: 400px;
+        background: #f00;
+        color: #fff;
+        overflow: hidden;
+        float: left;
+      }
+        .cube1:hover .div-slide-up {
+          bottom: 0;  /*div is moved UP inside cube*/
+          opacity: 1;
+        }
+      .cube2 {
+        position: relative;
+        width: 33.33%;
+        min-height:400px;
+        background: #fff;
+        color: #000;
+        overflow: hidden;
+        float: left;
+      }
+        .cube2:hover .div-slide-up {
+          bottom: 0;  /*div is moved UP inside cube*/
+          opacity: 1;
+        }
+      .cube3 {
+        position: relative;
+        width: 33.33%;
+        min-height: 400px;
+        background: #000;
+        color: #fff;
+        overflow: hidden;
+        float: left;
+      }
+        .cube3:hover .div-slide-up {
+          bottom: 0;  /*div is moved UP inside cube*/
+          opacity: 1;
+        }
+
+      .div-in-place{
+          font-size: 1.2em;
+          padding: 1em;
+        }
+
+      .div-slide-up {
+        position: absolute;
+        bottom: -100%;  /*div is moved down inside cube*/
+        height : 100%;
+        width : calc(100% - 4em);
+        background: #333; 
+        color: #fff;
+        opacity:0;          /*notice opacity 0 but 1 when div moved up*/
+        /*speed of transition / time it takes for transition to take effect*/
+        -webkit-transition: all 1s, -webkit-transform 1s;
+        transition: all 1s, transform 1s;
+        padding-left: 2em;
+        padding-right: 2em;
+        font-size: 1.2em;
+      }
+
+        .slide-up-pic{ 
+          position: absolute;
+          width: 70%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .slide-up-text{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+
+      .sectionHeader{
+        width: 100%;
+        min-height: 6em;
+        background: #0ff;
+        text-align: center;
+      }
+        .sectionHeader h2{
+          margin: 0;
+          padding-top: 1.5em;
+        }
+        .imgContainer{
+          width: 25%;
+        }
+        .fcenter {
+          margin: 0 auto;
+        }
+        #photoshop {
+          position: relative;
+          width: 66.66%;
+          min-height:400px;
+          color: #000;
+          overflow: hidden;
+          background: #fff;   
+          background: -webkit-linear-gradient(left, rgba(255, 0, 0, 1) , rgba(255, 255, 255, 1)); /* Safari */
+          background: -o-linear-gradient(right, rgba(255, 0, 0, 1) , rgba(255, 255, 255, 1)); /* Opera */
+          background: -moz-linear-gradient(right, rgba(255, 0, 0, 1) , rgba(255, 255, 255, 1)); /* Firefox */
+          background: linear-gradient(to right, rgba(255, 0, 0, 1) , rgba(255, 255, 255, 1)); /* Standard syntax always last */
+          float: left;
+        }
+        #photoshop:hover .div-slide-up {
+          bottom: 0;  /*div is moved UP inside cube*/
+          /*width:100%;
+          height:100%;*/
+          opacity: 1;
+        }
+        .photoshop .div-in-place h1{
+          margin-top: 0;    
+        }
+          .thumb{
+            width: 28%;
+            margin-left: 12%;
+        
+          }
+        
+        #contact{
+          margin-top: 3%;
+        }
+          #formWrapper{
+            max-width: 40%;
+            margin: 0 auto;
+          }
+          form
+          {
+            margin-left: calc(50% - 120px);    
+            height: 300px;
+              padding: 10px;
+              text-align: center;
+          }
+          textarea, input
+          {
+              font-size: 1.2em;
+              font-weight: 300;
+              margin: 10px;
+              display: block;
+          }
+          #sendBtn{
+            margin-left: 100px;
+          }
+/*end Sections*/
+
+
+/*footer*/
+footer{
+  width: 100%;
+  border-top: 1px solid #ccc;
+  height: 37px;
+  font-size: .8em;
+  padding-top: 13px;
+  text-align: center;
+  background: #fff;
+}/*end footer*/
+#emailWrapper {
+  text-align: center;
+}
+ /*begin media*/           
+@media screen and (max-width: 800px){
+#myHeader{
+  background-position: 35%;  
+}
+nav{
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+  }
+  nav ul li {
+    display: block;
+    padding: 1% 0%;
+    width: 100%;
+  }
+  nav ul li:hover {
+    
+    width: 100%;
+    background: #ccc;
+    }
+  nav ul li a{
+    transition: color 0s;
+    border-radius: 0%;
+  }
+.cube1 {
+  display: block;
+  width: 100%;
+}
+.cube2 {
+  display: block;
+  width: 100%;
+}
+
+.cube3 {
+  display: block;
+  width: 100%;
+}
+.div-slide-up{
+  display: block;
+  width: 80%;  
+}
+  #bikePic{ 
+    width: 50%;
+  }
+  .thumb{
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+#photoshop{
+  width: 100%;;
+
+}
+#contact{
+  width: 100%;
+}
+
+
+} /*end media*/
